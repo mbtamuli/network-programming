@@ -8,8 +8,8 @@ import (
 
 func main() {
 	if len(os.Args) != 2 {
-		fmt.Println("usage:", os.Args[0], "hostname")
-		os.Exit(1)
+		fmt.Fprintf(os.Stderr, "usage: %s %s\n", os.Args[0], "hostname")
+		os.Exit(2)
 	}
 	name := os.Args[1]
 
